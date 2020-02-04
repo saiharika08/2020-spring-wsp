@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: Georgia;
+  margin: 0;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #0A475E ;
+}
+
+.navbar a {
+  float: left;
+  font-size: 18px;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 20px;  
+  border: none;
+  color: white;
+  padding: 12px 12px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #77B8D1 ;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 8px 8px;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: grey;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.content {
+  background-color: #C9F1F1;
+  border-radius: 20px;
+  border: 2px solid #367F80;
+  color: black;
+  margin: 20px;
+  padding: 225px;
+}
+</style>
+<title> Example </title>
+</head>
+<body>
+
+<div class="navbar">
+  <div class="dropdown">
+    <button class="dropbtn">File
+    </button>
+    <div class="dropdown-content">
+      <a href="#">New File</a>
+      <a href="#">New Folder</a>
+      <a href="#">Open File</a>
+      <a href="#">Open Folder</a>
+      <a href="#">New Window</a>
+      <a href="#">Open Workspace</a>
+      <a href="#">Save</a>
+      <a href="#">Save As</a>
+      <a href="#">Close Editor</a>
+      <a href="#">Preferences</a>
+      <a href="#">Exit</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">Edit
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Undo</a>
+      <a href="#">Redo</a>
+      <a href="#">Cut</a>
+      <a href="#">Copy</a>
+      <a href="#">Paste</a>
+      <a href="#">Find</a>
+      <a href="#">Replace</a>
+      <a href="#">Delete</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">Format
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Word Wrap</a>
+      <a href="#">Font</a>
+    </div>
+  </div>
+   <div class="dropdown">
+    <button class="dropbtn">View
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Explorer</a>
+      <a href="#">Editor Layout</a>
+      <a href="#">Debug
+      <a href="#">Extensions</a></a>
+      <a href="#">Output</a>
+      <a href="#">Terminal</a>
+    </div>
+  </div>
+   <div class="dropdown">
+    <button class="dropbtn">Help
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Tips and Tricks</a>
+      <a href="#">Toggle Developer Tools</a>
+      <a href="#">Report Issue</a>
+      <a href="#">Check for updates</a>
+      <a href="#">Send Feedback</a>	
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">About
+    </button>
+    <div class="dropdown-content">
+      <a href="#">About software</a>
+      <a href="#">Documentation</a>
+      <a href="#">Release Notes</a>
+      <a href="#">Privacy Statement</a>
+      <a href="#">View License</a>
+    </div>
+  </div>
+</div>
+<div class="content">
+  <h1>HELLO EVERYONE !</h1>
+  <h2>Good Morning.</h2>
+  <p>This web page is a model of dropdown menu created with html and css. 
+Move your cursor near the navigation bar towards the menu you want to look up at, 
+and there you will get see the different list of actions mentioned at each menu.</p>
+</div>
+</body>
+</html>
