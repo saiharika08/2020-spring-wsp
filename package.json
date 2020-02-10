@@ -1,0 +1,22 @@
+{
+  "name": "2020-spring-wsp",
+  "version": "1.0.0",
+  "description": "<img align=\"right\"  width=\"110\" height=\"110\" src=\"harika.jpg\">",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "4.17.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saiharika08/2020-spring-wsp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saiharika08/2020-spring-wsp/issues"
+  },
+  "homepage": "https://github.com/saiharika08/2020-spring-wsp#readme"
+}
