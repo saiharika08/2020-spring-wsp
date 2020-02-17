@@ -81,8 +81,8 @@
                     <button class="delete" @click="remove(i)" ></button>
                     {{i}}. {{x.text}}
                 </div>
-                <input class="input" type="text" placeholder="Normal input" v-model="">
-                <button class="btn" @click="add()" > >Add</button>
+                <input class="input" type="text" placeholder="Text input" v-model="newTodo">
+                <button class="button is-primary is-light" @click="add()" > Add </button>
 
             </div>
         </div>
@@ -112,7 +112,7 @@
                 this.todos.splice(i, 1);
             },
             add(){
-                this.todos.push({ text: this.newTodos})
+                this.todos.push({ text: this.newTodo })
             }
         }
       })
