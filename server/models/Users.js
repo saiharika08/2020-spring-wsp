@@ -1,7 +1,9 @@
+/* B"H
+*/
 const Users = [
     { Name: 'Moshe', Password: '2020', Email: 'plotkinm@newpaltz.edu', userId: 0 },
     { Name: 'Bracha', Password: '5780', Email: 'chabad@newpaltz.edu', userId: 1},
-    
+    { Name: 'Bernie', Password: '2020', Email: 'bernie@newpaltz.edu', userId: 2 },    
 ];
 
 module.exports = {
