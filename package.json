@@ -1,27 +1,26 @@
 {
-  "name": "2020-spring-wsp",
+  "name": "2020-spring-what-do-you-meme",
   "version": "1.0.0",
-  "description": "<img align=\"right\"  width=\"110\" height=\"110\" src=\"harika.jpg\">",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node server/index.js",
-    "dev": "nodemon server/index.js"
+    "dev": "nodemon --watch ./server server/index.js"
   },
   "dependencies": {
-    "express": "4.17.1",
-    "vue": "^2.6.11"
+    "express": "^4.17.1"
   },
   "devDependencies": {
-    "nodemon": "2.0.2"
+    "nodemon": "^2.0.2"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/saiharika08/2020-spring-wsp.git"
+    "url": "git+https://github.com/jewpaltz/2020-spring-what-do-you-meme.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/saiharika08/2020-spring-wsp/issues"
+    "url": "https://github.com/jewpaltz/2020-spring-what-do-you-meme/issues"
   },
-  "homepage": "https://github.com/saiharika08/2020-spring-wsp#readme"
+  "homepage": "https://github.com/jewpaltz/2020-spring-what-do-you-meme#readme"
 }
