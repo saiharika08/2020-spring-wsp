@@ -6,7 +6,6 @@ const DEAL_AMOUNT = 3;
 let iCurrentCaption = 0;
 
 const Players = [
-    { Name: 'Bernie', Score: 0, isDealer: true }
 ];
 
 const MyCards = [];
@@ -18,6 +17,12 @@ const PictureDeck = [
 ];
 
 let CurrentPicture = "";
+let iCurrentPicture = 0;
+
+function FlipPicture(){
+    console.log(CurrentPicture)
+    return module.exports.CurrentPicture = PictureDeck[iCurrentPicture++]
+}
 
 const CardsInPlay = [];
 
@@ -34,8 +39,13 @@ function SubmitCaption(caption, playerId){
 }
 
 function Join(userId){
+    if(Players.some(x=> x.userId == userId)){
+        // The player already joined the game in another browser or computer
+        throw Error("You already joined this game in another browser or computer");
+    }
+
     const user = users.Get(userId);
-    Players.push( { Name: user.Name, Score: 0, isDealer: false })
+    Players.push( { Name: user.Name, Score: 0, isDealer: false, userId })
 
     const myCards = CaptionsDeck.list.slice(iCurrentCaption, iCurrentCaption + DEAL_AMOUNT);
     iCurrentCaption += DEAL_AMOUNT;
@@ -43,8 +53,12 @@ function Join(userId){
     return { playerId: Players.length -1, myCards }
 }
 
+function GetPlayerId(userId){
+    return Players.findIndex(x=> x.userId == userId);
+}
+
 module.exports = {
     Players, PictureDeck, CurrentPicture,
     CardsInPlay: CardsInPlay,
-    SubmitCaption, Join
+    SubmitCaption, Join, FlipPicture, GetPlayerId
 }
