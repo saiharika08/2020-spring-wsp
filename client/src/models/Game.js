@@ -1,36 +1,34 @@
 import { CurrentUser } from "./Users";
+import myFetch from "./myFetch";
 
-export const Players = [
-    { Name: 'Bernie', Score: 0, isDealer: false }
-];
+let interval;
 
-export const MyCards = [];
-
-export const PictureDeck = [
-    'http://www.dumpaday.com/wp-content/uploads/2020/02/00-147-750x280.jpg',
-    'http://www.dumpaday.com/wp-content/uploads/2020/02/00-146-750x280.jpg',
-    'http://www.dumpaday.com/wp-content/uploads/2020/02/00-131-750x280.jpg'
-];
-
-export const CaptionsDeck = [
-    'For me, math class is like watching a foreign movie without subtitles.',
-    'Maybe if we tell people the brain is an app, they will start using it.',
-    'When nothing goes right, go left.',
-    'A cop pulled me over and told me “Papers”, so I said “Scissors, I win!” and drove off.',
-    'Mom: Why is everything on the floor? Me: Gravity!',
-    'Sure, I do marathons. On Netflix.',
-    'Did it for the memories – totally worth it!',
-];
-
-export let CurrentPicture = "";
-
-export const CardsInPlay = [];
-
-export function Init(){
-    Players.push( { Name: CurrentUser.Name, Score: 0, isDealer: true })
-
-    MyCards.push(CaptionsDeck[0])
-    MyCards.push(CaptionsDeck[1]);
-
-    CurrentPicture = PictureDeck[0];
+export default { 
+    State: {},
+    MyCards: [],
+    Init(){
+        if(this.MyCards.length){
+            // The player already joined the game. They just temporarily went to a different view.
+            return;
+        }
+        myFetch('/game/join', {})
+            .then(x=> { 
+                this.MyCards = x.myCards;
+                console.log(x);
+            })
+            .catch(err=> console.warn(err));
+    },
+    Run(){
+        myFetch('/game')
+            .then(x=> { 
+                this.State = x;
+                console.log(x);
+            });
+    },
+    Start(){
+        interval = setInterval(()=> this.Run(), 2000 )
+    },
+    Pause(){
+        clearInterval(interval);
+    } 
 }
