@@ -40,8 +40,8 @@
 
 <script>
 import { Login } from "../models/Users";
-const GOOGLE_CLIENT_ID = "54172377215-0k6du17ds6up5gm3i1v0d62ehcmno6v2.apps.googleusercontent.com";
-const FACEBOOK_CLIENT_ID = "599472083988800";
+const GOOGLE_CLIENT_ID = "56829943813-0k6du17dji58ybk5k4jfv0d62ehcmno6v2.apps.googleusercontent.com";
+const FACEBOOK_CLIENT_ID = "623175368866465";
 let auth2 = null;
 
 export default {
