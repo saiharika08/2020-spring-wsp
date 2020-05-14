@@ -3,6 +3,7 @@ import myFetch from "./myFetch";
 
 let interval;
 
+
 export default { 
     State: {},
     MyCards: [],
